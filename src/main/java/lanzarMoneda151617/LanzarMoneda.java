@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class LanzarMoneda {
 
-    boolean[] moneda;
+    private boolean[] moneda;
 
     public LanzarMoneda() {
         moneda = new boolean[cantidad()];
@@ -75,8 +75,14 @@ public class LanzarMoneda {
 
     public void imprimir() {
         for (int i = 0; i < moneda.length; i++) {
+            String caraCruz;
+                if(moneda[i] ==false) {
+                    caraCruz ="Cruz";
+                }else{
+                    caraCruz="Cara";
+                }
 
-            System.out.println(i+1 + "-" + moneda[i]);
+            System.out.println(i+1 + "-" + caraCruz);
         }
     }
 }
