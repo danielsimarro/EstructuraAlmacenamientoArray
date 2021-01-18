@@ -69,7 +69,19 @@ public class Ej23 {
     }
     
     public void sizeLista(){
-        System.out.println("El tamaño del array es de: " + this.listaEnteros.size());
+        int tamanio = listaEnteros.size();
+        System.out.println("El tamaño del array es de: " + tamanio);
     }
-
+    
+    public void borrarSegunPosicion(int posicion){
+        listaEnteros.remove(posicion);
+    }
+    
+    public void borraSegunValor(String valor){
+        listaEnteros.remove(valor);
+    }
+    
+    /*public void modificarElemento (int posicion, Character valor){
+        listaEnteros.add(posicion,valor);
+    }*/
 }
