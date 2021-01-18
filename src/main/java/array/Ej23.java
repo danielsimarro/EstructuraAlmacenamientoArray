@@ -67,5 +67,9 @@ public class Ej23 {
         int e = i;
         return e;
     }
+    
+    public void sizeLista(){
+        System.out.println("El tamaño del array es de: " + this.listaEnteros.size());
+    }
 
 }
