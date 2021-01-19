@@ -8,6 +8,7 @@ package array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Scanner;
 
 /**
  *
@@ -89,5 +90,8 @@ public class Ej23 {
     
     public void modificarElemento (int posicion, int valor){
         listaEnteros.set(posicion,valor);
+        
+        
+               
     }
 }
