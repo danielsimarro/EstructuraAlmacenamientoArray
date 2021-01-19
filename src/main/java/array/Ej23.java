@@ -46,26 +46,24 @@ public class Ej23 {
         System.out.println("La suma de todos los números pares es de: " +suma);
     }
     
-    public void imprimirSumaImpares () {
-        int suma=0;
+    public void imprimirImpares () {
+        int contador=0;
         for (int i = 0; i < listaEnteros.size(); i++) {
             if((listaEnteros.get(i)%2)!=0){
-                suma += listaEnteros.get(i);
+                contador++;
             }
         }
-        System.out.println("La suma de todos los números impares es de: " + suma);
+        System.out.println("La cantidad de todos los números impares es de: " + contador);
     }
     
     public int elementoMayor(){
         Integer i = Collections.max(listaEnteros);
-        int e = i;
-        return e;
+        return i;
     }
     
     public int elementoMenor(){
         Integer i = Collections.min(listaEnteros);
-        int e = i;
-        return e;
+        return i;
     }
     
     public void sizeLista(){
@@ -74,14 +72,22 @@ public class Ej23 {
     }
     
     public void borrarSegunPosicion(int posicion){
-        listaEnteros.remove(posicion);
+        if(posicion >= listaEnteros.size()){
+            listaEnteros.remove(posicion);
+        }
+        
     }
     
-    public void borraSegunValor(String valor){
-        listaEnteros.remove(valor);
+    public void borraSegunValor(int valor){
+        for (int i = 0; i < listaEnteros.size(); i++) {
+            if(listaEnteros.get(i) == valor){
+                listaEnteros.remove(i);
+                i--;//Por si borra que compruebe la posición que ha borrado ya que el valor siguiente pasara a esa posición
+            }
+        }
     }
     
-    /*public void modificarElemento (int posicion, Character valor){
-        listaEnteros.add(posicion,valor);
-    }*/
+    public void modificarElemento (int posicion, int valor){
+        listaEnteros.set(posicion,valor);
+    }
 }
