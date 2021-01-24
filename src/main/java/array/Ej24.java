@@ -40,7 +40,7 @@ public class Ej24 {
 
         /*for (int i = 0; i < listaTamamo1; i++) {
             for (int j = 0; i < listaTamamo2; i++) {
-                if (lista1.get(i).equals(metodo(lista2))) {
+                if () {
                     lista1.remove(i);
 
                 }
@@ -52,9 +52,12 @@ public class Ej24 {
 
     }
 
-    public static void metodo(ArrayList a,int b) {
+    public static boolean metodo(ArrayList a, int num) {
         for (int i = 0; i < a.size(); i++) {
-            if()
+            if(a.get(i).equals(num)){
+                return true;
+            }
+            return false;
         }*/
 
     }
