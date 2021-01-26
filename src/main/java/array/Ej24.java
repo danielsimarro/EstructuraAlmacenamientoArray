@@ -37,29 +37,36 @@ public class Ej24 {
         lista1.forEach(System.out::println);
         System.out.println("Valores de la lista 2");
         lista2.forEach(System.out::println);
+        
+        ArrayList<Integer> lista3 = new ArrayList<>();
 
-        /*for (int i = 0; i < listaTamamo1; i++) {
-            for (int j = 0; i < listaTamamo2; i++) {
-                if () {
-                    lista1.remove(i);
-
-                }
+        for (int i =0; i<lista1.size();i++){
+            if(!lista2.contains(lista1.get(i))){
+                lista3.add(lista1.get(i));
+            }
+        }
+        
+        System.out.println("Valores de la lista 3");
+        lista3.forEach(System.out::println);
+        
+        ArrayList<Integer> lista4 = new ArrayList<>();
+        
+        for(int i = 0; i < lista1.size();i++){
+            if(lista1.get(i)%2==0){
+                lista4.add(lista1.get(i));
+            }
+        }
+        
+        for(int i = 0; i < lista2.size();i++){
+            if(lista2.get(i)%2!=0){
+                lista4.add(lista2.get(i));
             }
         }
 
-        System.out.println("Valores de la lista 3");
-        lista1.forEach(System.out::println);
-
+        System.out.println("Valores de la lista 4");
+        lista4.forEach(System.out::println);
     }
-
-    public static boolean metodo(ArrayList a, int num) {
-        for (int i = 0; i < a.size(); i++) {
-            if(a.get(i).equals(num)){
-                return true;
-            }
-            return false;
-        }*/
-
-    }
+    
+    
 
 }
