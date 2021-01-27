@@ -28,7 +28,7 @@ public class Main {
         System.out.println("--------");
         int posi = moto.buscarCv(new Moto ("ducati","scrambler hashtag", 36));
         System.out.println("Posicion de la moto según los cv" + posi);
-        
+        moto.ordenarMarca();
         int posimarca = moto.buscarMarca(new Moto ("yamaha","jog",3 ));
         System.out.println("Posicion de la moto según la marca " + posimarca);
     }

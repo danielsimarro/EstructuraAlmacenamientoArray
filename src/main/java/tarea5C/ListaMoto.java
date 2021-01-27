@@ -29,10 +29,24 @@ public class ListaMoto {
         listaMotos.add(m);
     }
     
-    public void eliminatMoto (int posicion){
+    public void nuevaMoto(int posicion, Moto m){
+        if (posicion >= 0 && posicion < listaMotos.size()) {
+            listaMotos.add(posicion, m);
+        }
+    }
+    
+    public boolean motosHay(){
+        return listaMotos.isEmpty();
+    }
+    
+    public void eliminarMoto (int posicion){
         if (posicion >= 0 && posicion < listaMotos.size()) {
             listaMotos.remove(posicion);
         }
+    }
+    
+    public void elimanarMoto(Moto m){
+        listaMotos.remove(m);
     }
     
     public Moto cogerMoto (int posicion){
@@ -48,6 +62,16 @@ public class ListaMoto {
             System.out.println(tmp.listaMotos.get(i).getMarca() + " " + tmp.listaMotos.get(i).getModelo() + " " +  tmp.listaMotos.get(i).getCv());
         }
         
+    }
+    
+    //Los metodos indexOf, cntains y remove por objeto y no por posicion requieren de los metodos 
+    // de hascode y equals de la clase moto.
+    public int buscarMoto(Moto m){
+        return listaMotos.indexOf(m);
+    }
+    
+    public boolean existeMoto(Moto m){
+        return listaMotos.contains(m);
     }
     
     public void ordenarMarca(){
@@ -74,6 +98,8 @@ public class ListaMoto {
         int posi = Collections.binarySearch(listaMotos, m, criterio);
 
         return posi;
+        
+        //Tambien se puede poner como retrun Collections.binarySearch(listaMotos, m, (c1,c2) -> c1.getCv().compareTo(c2.getCv());
     }
     
 }
