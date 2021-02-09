@@ -5,6 +5,8 @@
  */
 package array;
 
+import java.util.Scanner;
+
 /**
  *
  * @author daniel
@@ -12,19 +14,34 @@ package array;
 public class Ej12 {
 
     public static void main(String[] args) {
-
-        int[][] numero = {{5, 7, 9},{4, 6, 5}};
         
-        imprimir(numero);
+        Scanner teclado = new Scanner (System.in);
+        final int FILAS = 2;
+        final int COLUMNAS =3;
 
-    }
-
-    public static void imprimir(int[][] parametro) {
-        for (int i = 0; i < parametro.length; i++) {
-            for (int j = 0; j < parametro[i].length; j++) {
-                System.out.println("Los numeros de [" + i + "]["
-                        + j + "] es " + parametro[i][j]);
+        char[][] matriz = new char[FILAS][COLUMNAS];
+        
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                System.out.println("Introduzca un cacacter [" +i+ "," + j + "]");
+                matriz[i][j] = teclado.next().charAt(0);
             }
         }
+        
+        
+        imprimir(matriz);
+
     }
+
+    public static void imprimir(char[][] parametro) {
+        for (int i = 0; i < parametro.length; i++) {
+            for (int j = 0; j < parametro[i].length; j++) {
+                System.out.println(parametro[i][j] + "\t");
+                
+            }
+            System.out.println("");
+        }
+    }
+    
+    
 }
