@@ -27,7 +27,7 @@ public class ListaAviones {
         listaAviones.add(m);
     }
 
-    public void nuevaMoto(int posicion, Avion m) {
+    public void nuevaAvion(int posicion, Avion m) {
         if (posicion >= 0 && posicion < listaAviones.size()) {
             listaAviones.add(posicion, m);
         }
@@ -66,6 +66,21 @@ public class ListaAviones {
         }
             
         }
+
+    @Override
+    public String toString() {
+        return "ListaAviones{" + "listaAviones=" + listaAviones + '}';
+    }
+
+    public ArrayList<Avion> getListaAviones() {
+        return listaAviones;
+    }
+
+    public void setListaAviones(ArrayList<Avion> listaAviones) {
+        this.listaAviones = listaAviones;
+    }
             
+        
+        
         
     }
