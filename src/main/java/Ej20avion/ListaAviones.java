@@ -48,12 +48,13 @@ public class ListaAviones {
 
     }
 
-    /*public static void imprimirLista(ListaAviones tmp) {
+    public static void imprimirLista(ListaAviones tmp) {
         for (int i = 0; i < tmp.numeroAviones(); i++) {
-            System.out.println("El nombre del avion es: " + tmp.listaAviones.get(i).getAvion() + "/nAsientos disponibles:" + metodoImprimirAsientos(tmp.listaAviones.get(i).getAsientos()));
+            System.out.println("El nombre del avion es: " + tmp.listaAviones.get(i).getAvion() + "/nAsientos disponibles:");
+            metodoImprimirAsientos(tmp.listaAviones.get(i).getAsientos());
             
         }
-    }*/
+    }
 
         
         public static void metodoImprimirAsientos(boolean[][] reservas){
