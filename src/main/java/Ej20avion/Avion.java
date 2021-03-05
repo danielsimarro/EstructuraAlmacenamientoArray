@@ -12,8 +12,10 @@ import java.util.Scanner;
  * @author NitroPc
  */
 public class Avion {
+    
+    
 
-    public static Scanner teclado = new Scanner(System.in);
+    private static Scanner teclado = new Scanner(System.in);
     private String avion;
     private boolean[][] asientos;
 
@@ -63,7 +65,7 @@ public class Avion {
 
     }
 
-    public  void asientosLibresOcupados(boolean[][] reservas) {
+    public  static void asientosLibresOcupados(boolean[][] reservas) {
         for (int i = 0; i < reservas.length; i++) {
             for (int j = 0; j < reservas[i].length; j++) {
 

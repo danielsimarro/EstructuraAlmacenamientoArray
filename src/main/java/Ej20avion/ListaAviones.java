@@ -16,7 +16,7 @@ public class ListaAviones {
     private ArrayList<Avion> listaAviones;
 
     public ListaAviones() {
-        listaAviones = new ArrayList<>();;
+        listaAviones = new ArrayList<>();
     }
 
     public int numeroAviones() {
@@ -48,10 +48,11 @@ public class ListaAviones {
 
     }
 
-    public static void imprimirLista(ListaAviones tmp) {
+    public  void imprimirLista(ListaAviones tmp) {
         for (int i = 0; i < tmp.numeroAviones(); i++) {
             System.out.println("El nombre del avion es: " + tmp.listaAviones.get(i).getAvion() + "/nAsientos disponibles:");
             metodoImprimirAsientos(tmp.listaAviones.get(i).getAsientos());
+            
             
         }
     }
@@ -79,6 +80,10 @@ public class ListaAviones {
 
     public void setListaAviones(ArrayList<Avion> listaAviones) {
         this.listaAviones = listaAviones;
+    }
+    
+    public  boolean[][] obtenerReservas(int posicion){
+        return listaAviones.get(posicion).getAsientos();
     }
             
         

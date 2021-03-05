@@ -12,9 +12,12 @@ package Ej20avion;
 public class Prueba {
     public static void main(String[] args) {
         ListaAviones easyjet = new ListaAviones();
+        Avion aresol = new Avion();
         
-        easyjet.nuevaAvion(new Avion());
-        easyjet.getListaAviones().get(0).reservar(easyjet.getListaAviones().get(0).getAsientos(), 4, 5);
+        easyjet.nuevaAvion(aresol);
         
+        easyjet.getListaAviones().get(0).reservar(easyjet.obtenerReservas(0),2, 1);
+        
+        ListaAviones.metodoImprimirAsientos(easyjet.getListaAviones().get(0).getAsientos());
     }
 }
