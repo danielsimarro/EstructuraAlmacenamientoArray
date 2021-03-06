@@ -17,11 +17,11 @@ public class Matriz {
         int[][] numero = {{4, 3, 16}, {7, 2, 9}, {1, 5, 17}};
 
         
-        int numeroMatriz = 0;
-        int fila = 0;
-        int columna = 0;
+        int numeroMatriz=0;
+        int fila;
+        int columna;
         
-        int numeroMomento = 0;
+        int numeroMomento;
         
 
         for (int a = 0; a < numero.length; a++) { //Fila de la tabla
