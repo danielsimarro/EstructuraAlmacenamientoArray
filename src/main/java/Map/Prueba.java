@@ -29,11 +29,12 @@ public class Prueba {
         a1.agregarAsignaturas(programacion);
         a1.agregarAsignaturas(fol);
         a1.agregarAsignaturas(sistemas);
-        
+
         System.out.println(a1.toString());
-        
+
         a1.aggregarExp("069AA", a1);
-        
+
         a1.impimirExp();
+
     }
 }

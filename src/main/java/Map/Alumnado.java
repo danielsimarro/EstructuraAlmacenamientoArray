@@ -30,6 +30,11 @@ public class Alumnado {
         
     }
 
+    public Alumnado() {
+    }
+    
+    
+
     public String getNombre() {
         return nombre;
     }
@@ -88,6 +93,7 @@ public class Alumnado {
             System.out.println("El alumno con el expediente " + key + " es: " + numeroExpediente.get(key).nombre);
         }
     }
+    
     
     
 }
