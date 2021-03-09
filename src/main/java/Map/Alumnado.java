@@ -92,8 +92,12 @@ public class Alumnado {
         for(String key: numeroExpediente.keySet()){
             System.out.println("El alumno con el expediente " + key + " es: " + numeroExpediente.get(key).nombre);
         }
+        
     }
     
-    
+    //Metodo para obtener el alumno por su expediente
+    public Alumnado obtenerAlumno(String key){
+        return numeroExpediente.get(key);
+    }
     
 }
